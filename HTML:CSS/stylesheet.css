@@ -19,6 +19,7 @@ body  {
   height: 100%;
   width: 100%;
   max-width: 1450px;
+  font-family: 'Roboto', sans-serif;
   margin: auto;
   background: #FFF;
 }
@@ -30,34 +31,102 @@ body  {
 
 header  {
   width: 100%;
-  height: 100px;
-  background: red;
-  display: flex;
-}
-
-.header-right-cont  {
-  width: 30%;
-  height: 100%;
-  background: blue;
+  height: 155px;
+  position: relative;
 }
 
 .header-left-cont  {
-  width: 70%;
-  height: 100%;
-  background: green;
+  width: 300px;
+  height: 80px;
+  background: #FFFFFF;
+  position: absolute;
+  top: 6px;
+  left: 30px;
+  background-image: url('./Assets/SVGs/TEN-logo.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.header-right-cont  {
+  width: 100%;
+  height: 88px;
+}
+
+.header-upper-nav,
+.header-lower-nav  {
+  width: 100%;
+  height: 44px;
+  float: right;
 }
 
 .header-upper-nav {
-  width: 100%;
-  height: 50%;
-  display: flex;
+  padding-right: 15px;
 }
 
 .header-lower-nav {
-  width: 100%;
-  height: 50%;
-  display: flex;
+  padding-right: 5px;
 }
+
+.header-upper-nav-con {
+  width: 46px;
+  height: 90%;
+  float: right;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/*.menu-nav-con {
+  display: none;
+}*/
+
+.upper-nav-image  {
+  fill: #2399a6;
+}
+
+.upper-nav-title  {
+  font-size: 10px;
+  color: #aaaaaa;
+  margin-top: 4px;
+}
+
+.header-upper-nav-con:hover {
+  cursor: pointer;
+  background: #aaaaaa;
+  border-radius: 10px;
+  opacity: .4;
+  color: #FFFFFF;
+}
+
+.header-upper-nav-con:hover .upper-nav-image {
+  fill: #FFFFFF;
+}
+
+.header-upper-nav-con:hover .upper-nav-title {
+  color: #FFFFFF;
+}
+
+.lower-nav-titles {
+  float: right;
+  font-size: 14px;
+  line-height: 50px;
+  margin: 0 20px 0 20px;
+}
+
+.lower-nav-titles:hover {
+  cursor: pointer;
+  color: #2399a6;
+}
+
+.header-lower-cont  {
+  width: 100%;
+  height: 55px;
+  background: #aaaaaa;
+}
+
 
 /**********************************************
           Main
