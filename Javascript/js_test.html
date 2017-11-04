@@ -44,6 +44,12 @@
 		a.clicked{
 			color:red;
 		}
+		.selected	{
+			font-size:24px;
+			color: red;
+			margin:15px 0 5px 0;
+		}
+
 	</style>
 </head>
 <body>
@@ -118,6 +124,8 @@
 					<option value="asp" selected="selected">ASP</option>
 				</select>
 			</label>
+			<div class='display-selected'>
+			</div>
 		</fieldset>
 	</form>
 
@@ -159,6 +167,24 @@ Please also write your jquery in a no conflict manner.
 
 		//Select the only the first children of the LI "Sally"
 		$('#content2 ul ul li:lt(2)').css('color', 'red')
+
+		// Get a Field value and Write it to the page
+		const updateSelection = (e) => {
+			let value = e.target.value
+			$('.display-selected').append(`
+				<p class='selected'>${value}</p>
+			`)
+		}
+
+		const clearSelection = () =>	{
+			$('.selected').remove();
+		}
+
+		$('form').change((e) => {
+			clearSelection();
+			updateSelection(e);
+		})
+
 
 
 
