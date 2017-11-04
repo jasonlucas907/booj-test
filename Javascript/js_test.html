@@ -192,11 +192,14 @@ Please also write your jquery in a no conflict manner.
 			$('#setDims').append(`
 				My height is ${height} & my width is ${width}.
 				`);
-	})
+		})
 
+		// Place a click event on the following link.
+		const changeLinkClass = () =>	{
+			$('#clickEventLink').toggleClass('clicked');
+		}
 
-
-
+		$('#clickEventLink').on('click', changeLinkClass)
 
 
 
