@@ -161,7 +161,6 @@ Please also write your jquery in a no conflict manner.
 
 	jQuery(document).ready(function($){
 
-
 		// Manipulate the Last LI
 	  $('#content li:last-child').css('color' , 'red')
 
@@ -173,7 +172,7 @@ Please also write your jquery in a no conflict manner.
 			let value = e.target.value
 			$('.display-selected').append(`
 				<p class='selected'>${value}</p>
-			`)
+				`);
 		}
 
 		const clearSelection = () =>	{
@@ -185,6 +184,15 @@ Please also write your jquery in a no conflict manner.
 			updateSelection(e);
 		})
 
+		// Find Dimensions of an Element
+		$( document ).ready( () => {
+			const height = $('#setDims').height();
+			const width = $('#setDims').width();
+			$('#setDims').text('');
+			$('#setDims').append(`
+				My height is ${height} & my width is ${width}.
+				`);
+	})
 
 
 
