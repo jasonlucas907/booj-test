@@ -28,6 +28,9 @@ body  {
   background: #FFF;
 }
 
+/**********************************************
+          Slider Navigation on menu click
+***********************************************/
 
 /**********************************************
           Header
@@ -35,7 +38,7 @@ body  {
 
 header  {
   width: 100%;
-  height: 155px;
+  height: 137px;
   position: relative;
 }
 
@@ -81,9 +84,9 @@ header  {
   transition: .5s;
 }
 
-/*.menu-nav-con {
+.menu-nav-con {
   display: none;
-}*/
+}
 
 .upper-nav-image  {
   fill: #2399a6;
@@ -130,7 +133,7 @@ header  {
 }
 
 /*  header lower container */
-.header-lower-cont  {
+.header-lower-con  {
   width: 100%;
   height: 50px;
   background: #aaaaaa;
@@ -179,11 +182,257 @@ header  {
 }
 
 
-
-
-
-
-
 /**********************************************
           Main
 ***********************************************/
+
+.realtor-contact-con  {
+  width: 100%;
+  height: 360px;
+  background: #eeeeee;
+  display: flex;
+}
+
+/* profile picture container */
+.profile-picture  {
+  width: 237px;
+  height: 360px;
+  margin-left: 112px;
+  background-image: url('./Assets/Realtor Image/saramortensun.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*  name and contect me container */
+.name-con {
+  width: 225px;
+  height: 360px;
+  margin-left: 88px;
+}
+
+.realtor-name {
+  font-size: 30px;
+   font-weight: 100;
+   margin: 91px 0 0 0px;
+}
+
+.registered-realtor {
+  font-size: 12px;
+  margin: 6px 0 0 0;
+  color: #aaaaaa;
+  font-weight: 100;
+}
+
+.contact-button {
+  width: 225px;
+  height: 36px;
+  font-size: 14px;
+  background: #2399a6;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  margin: 24px 0 0 0;
+  transition: .5s;
+}
+
+.contact-button:hover  {
+  cursor: pointer;
+  box-shadow: 1px 1px 15px green;
+}
+
+.social-media-con {
+  width: 225px;
+  height: 36px;
+  margin: 20px 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.social-media-icon  {
+  transition: .5s;
+}
+
+.social-media-icon:hover  {
+  cursor: pointer;
+  fill: #2399a6;
+  transform: scale(1.2);
+}
+
+/* contact info container*/
+.contact-info-con {
+  width: 225px;
+  height: 360px;
+  margin-left: 88px;
+  padding-top: 88px;
+}
+
+.contact-con  {
+  width: 225px;
+  height: 28px;
+  margin: 5px 0 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-icon   {
+  fill: #2399a6;
+  margin: 0 14px 0 0;
+}
+
+.phone-num  {
+  margin: 0 0 0 4px;
+}
+
+.contact-title  {
+  color: #2399a6;
+}
+
+/***************************************
+media query 1000
+****************************************/
+
+@media screen and (max-width: 1000px) {
+
+  .nav-titles {
+    margin: 0 14px 0 14px;
+  }
+
+  .search-input {
+    width: 202px;
+    margin: 7.5px 0 0 65px;
+  }
+
+  .search-button  {
+    width: 108px;
+    margin-right: 36px;
+  }
+
+  /*  name and contact me container */
+  .realtor-contact-con {
+    height: 270px;
+  }
+
+  .name-con {
+    height: 270px;
+    margin-left: 77px;
+  }
+
+  .contact-info-con {
+    height: 270px;
+    padding-top: 36px;
+    margin-left: 45px;
+  }
+
+  .profile-picture  {
+    width: 203px;
+    height: 270px;
+    margin-left: 66px;
+  }
+
+  .realtor-name {
+    margin-top: 44px;
+  }
+
+  .contact-button {
+    width: 185px;
+  }
+
+  .social-media-con {
+    width: 185px;
+  }
+
+}
+
+
+/***************************************
+media query 805
+****************************************/
+
+@media screen and (max-width: 805px) {
+
+  .header-lower-nav {
+    display: none;
+  }
+
+  .header-right-cont  {
+    height: 50px;
+  }
+
+  .header-left-cont {
+    width: 190px;
+    height: 50px;
+    top: 0px;
+    left: 0px;
+    background-size: 88%;
+  }
+
+  .menu-nav-con {
+    display: flex;
+  }
+
+  .header-upper-nav {
+    padding-right: 0px;
+  }
+
+  .search-input {
+    margin-left: 12px;
+  }
+
+  .search-button  {
+    margin-right: 4px;
+  }
+
+  .nav-titles {
+    font-size: 12px;
+    margin: 0 5px 0 10px;
+  }
+
+}
+
+
+/***************************************
+media query 640
+****************************************/
+
+@media screen and (max-width: 640px) {
+
+  .header-left-cont  {
+    width: 83px;
+    height: 50px;
+    background-image: url('./Assets/SVGs/TEN-logo-mark.svg');
+    background-size: 66%;
+  }
+
+  .nav-titles {
+    display: none;
+  }
+
+  .header-lower-con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search-button  {
+    width: 68px;
+    height: 35px;
+    font-size: 0px;
+    margin: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-image: url('./Assets/SVGs/search.svg');
+    fill: #FFFFFF;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30%;
+  }
+
+  .search-input {
+    margin: 0px;
+  }
+
+
+}
