@@ -164,7 +164,7 @@ header  {
 
 .search-button:hover  {
   cursor: pointer;
-  box-shadow: 1px 1px 15px white;
+  box-shadow: 1px 1px 15px #FFFFFF;
 }
 
 .nav-titles {
@@ -191,6 +191,8 @@ header  {
   height: 360px;
   background: #eeeeee;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* profile picture container */
@@ -280,6 +282,7 @@ header  {
 .contact-icon   {
   fill: #2399a6;
   margin: 0 14px 0 0;
+  transition: .5s;
 }
 
 .phone-num  {
@@ -288,6 +291,22 @@ header  {
 
 .contact-title  {
   color: #2399a6;
+}
+
+.contact-con:hover  {
+  cursor: pointer;
+}
+
+.contact-con:hover .contact-icon {
+  transform: scale(1.2);
+}
+
+.contact-con:hover .contact-title {
+  color: #aaaaaa;
+}
+
+.contact-con:hover .phone-num {
+  color: #aaaaaa;
 }
 
 /***************************************
@@ -353,6 +372,10 @@ media query 805
 
 @media screen and (max-width: 805px) {
 
+  header  {
+    height: 100px;
+  }
+
   .header-lower-nav {
     display: none;
   }
@@ -388,6 +411,32 @@ media query 805
   .nav-titles {
     font-size: 12px;
     margin: 0 5px 0 10px;
+  }
+
+
+  .realtor-name {
+    margin-top: 10px;
+  }
+
+  .realtor-contact-con {
+    height: 186px;
+  }
+
+  .profile-picture {
+    width: 138px;
+    height: 186px;
+    margin-left: 12px;
+  }
+
+  .name-con {
+    height: 186px;
+    margin-left: 30px;
+  }
+
+  .contact-info-con {
+    height: 186px;
+    padding-top: 7px;
+    margin-left: -11px;
   }
 
 }
@@ -432,6 +481,36 @@ media query 640
 
   .search-input {
     margin: 0px;
+  }
+
+  .realtor-contact-con {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .profile-picture  {
+    margin: 0px;
+    width: 203px;
+    height: 476px;
+    margin-right: 67px;
+  }
+
+  .name-con {
+    margin: 0px;
+    margin-right: 40px;
+  }
+
+  .contact-info-con {
+    margin: 0px;
+    padding-bottom: 20px;
+    margin-right: 40px;
+  }
+
+  .contact-button {
+    margin-top: 11px;
   }
 
 
