@@ -102,7 +102,7 @@ header  {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  transition: .5s;
+  transition: 1s;
   border-radius: 10px;
 }
 
@@ -158,6 +158,7 @@ header  {
 .lower-header {
   width: 100%;
   background: #aaaaaa;
+  box-shadow:  0 8px 6px -6px #aaaaaa;
 }
 
 .header-lower-con  {
@@ -165,7 +166,7 @@ header  {
   margin: auto;
   height: 50px;
   background: #aaaaaa;
-  box-shadow:  0 8px 6px -6px #aaaaaa;
+
 }
 
 .search-input {
@@ -193,6 +194,7 @@ header  {
 .search-button:hover  {
   cursor: pointer;
   box-shadow: 1px 1px 15px #FFFFFF;
+  background: #237377;
 }
 
 .nav-titles {
@@ -287,7 +289,8 @@ header  {
 
 .contact-button:hover  {
   cursor: pointer;
-  box-shadow: 1px 1px 15px green;
+  box-shadow: 1px 1px 15px #FFFFFF;
+  background: #237377;
 }
 
 .social-media-con {
