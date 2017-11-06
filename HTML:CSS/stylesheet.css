@@ -487,12 +487,14 @@ footer  {
 .footer-phone-num {
   font-size: 14px;
   color: #FFFFFF;
+  font-weight: 300;
   display: inline-block;
 }
 
 .footer-address {
   font-size: 14px;
   color: #FFFFFF;
+  font-weight: 300;
   margin-top: 8px;
 }
 
@@ -537,6 +539,7 @@ footer  {
 .footer-nav {
   font-size: 14px;
   color: #FFFFFF;
+  font-weight: 300;
   text-decoration: underline;
 }
 
@@ -548,6 +551,7 @@ footer  {
 .copyright  {
   font-size: 10px;
   color: #FFFFFF;
+  font-weight: 300;
   margin-left: 100px;
   margin-top: 12px;
 }
