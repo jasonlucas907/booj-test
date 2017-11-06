@@ -39,6 +39,11 @@ body  {
           Slider Navigation on menu click
 ***********************************************/
 
+.outer-slider-nav-con {
+  display: none;
+}
+
+
 /**********************************************
           Header
 ***********************************************/
@@ -46,12 +51,16 @@ body  {
 header  {
   width: 100%;
   height: 137px;
+  position: fixed;
+  z-index: 3;
 }
+
 
 .upper-header {
   max-width: 1350px;
   margin: auto;
   position: relative;
+  background: #FFFFFF;
 }
 
 .header-left-cont  {
@@ -94,6 +103,7 @@ header  {
   justify-content: center;
   flex-direction: column;
   transition: .5s;
+  border-radius: 10px;
 }
 
 .menu-nav-con {
@@ -204,6 +214,12 @@ header  {
           Main
 ***********************************************/
 
+
+
+.header-spacer  {
+  height: 137px;
+}
+
 .outer-realtor-contact-con  {
   width: 100%;
   background: #eeeeee;
@@ -242,6 +258,7 @@ header  {
   font-size: 30px;
    font-weight: 100;
    margin: 91px 0 0 0px;
+   letter-spacing: 2;
 }
 
 .registered-realtor {
@@ -379,7 +396,7 @@ header  {
   border-bottom: 2px solid #2399a6;
 }
 
-.realtor-nav-selcted  {
+.realtor-nav-selected  {
   color: #2399a6;
 }
 
@@ -425,6 +442,8 @@ header  {
 
 .realtor-info-con {
   color: #666666;
+  font-size: 15px;
+  line-height: 1.7;
 }
 
 .additional-info-title  {
@@ -440,6 +459,122 @@ header  {
   font-weight: 400;
   margin: 0 0 30px 0;
 }
+
+
+/***************************************
+footer
+****************************************/
+
+footer  {
+  width: 100%;
+  background: #2399a6;
+  height: 130px;
+  margin-top: 50px;
+}
+
+.footer-con {
+  max-width: 1350px;
+  width: 100%;
+  /*display: flex;*/
+  margin: auto;
+  /*margin-top: 50px;*/
+  position: relative;
+  /*padding-top: 20px;*/
+}
+
+.footer-left  {
+  position: absolute;
+  top: 20px;
+  left: 112px;
+  width: 226px;
+  /*background: green;*/
+}
+
+.footer-contact-icon  {
+  fill: #FFFFFF;
+  display: inline-block;
+  height: 12px;
+}
+
+.footer-phone-num {
+  display: inline-block;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.footer-address {
+  color: #FFFFFF;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.footer-social-con {
+  width: 99%;
+  height: 36px;
+  margin: 20px 0 0 0;
+  padding: 0 10px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  font-weight: lighter;
+}
+
+.footer-social-icon {
+  fill: #FFFFFF;
+  height: 17px;
+  transition: .5s;
+}
+
+.footer-social-icon:hover {
+  cursor: pointer;
+  fill: #aaaaaa;
+  transform: scale(1.1);
+}
+
+.footer-right  {
+  position: absolute;
+  top: 20px;
+  right: 112px;
+  width: 275px;
+  /*background: blue;*/
+}
+
+.footer-nav-con {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.footer-nav {
+  color: #FFFFFF;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.footer-nav:hover {
+  cursor: pointer;
+  color: #aaaaaa;
+}
+
+.copyright  {
+  color: #FFFFFF;
+  font-size: 10px;
+  margin-left: 100px;
+  margin-top: 12px;
+}
+
+.footer-icons-con {
+  float: right;
+}
+
+.footer-icon  {
+  fill: #FFFFFF;
+  height: 28px;
+}
+
+
 
 /***************************************
 media query 1000
@@ -515,6 +650,16 @@ media query 1000
     margin-left: 66px;
   }
 
+
+
+  .footer-left  {
+    left: 66px;
+  }
+
+  .footer-right {
+    right: 66px;
+  }
+
 }
 
 
@@ -524,9 +669,75 @@ media query 805
 
 @media screen and (max-width: 805px) {
 
+  /**********************************************
+            Slider Navigation on menu click
+  ***********************************************/
+
+  .outer-slider-nav-con {
+    display: none;
+  }
+
+  .outer-slider-nav-con {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: -500px;
+    z-index: 2;
+    transition: 1s;
+  }
+
+  .slider-nav-con {
+    width: 300px;
+    /*height: 400px;*/
+    /*margin: auto;*/
+    float: right;
+    background: white;
+    border: 2px solid #2399a6;
+    border-radius: 5px;
+    display: flex;
+    padding: 10px;
+    /* align-items: center; */
+    /* justify-content: center; */
+    flex-direction: column;
+  }
+
+  .drop-menu  {
+    top: 100px;
+    animation-name: slider-menu;
+    animation-duration: 1s;
+  }
+
+  @keyframes slider-menu {
+    0%{ top: -500px; }
+    100%{ top: 100px; }
+  }
+
+  .drop-nav {
+    font-size: 24px;
+    color: #2399a6;
+    margin-bottom: 10px;
+  }
+
+  .drop-nav:hover {
+    background: #2399a6;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+
+  .drop-nav-hidden  {
+    display: none;
+  }
+
+
+
   header  {
     height: 100px;
   }
+
+  .header-spacer  {
+    height: 100px;
+  }
+
 
   .header-lower-nav {
     display: none;
@@ -626,6 +837,16 @@ media query 805
     width: 77%;
   }
 
+
+
+  .footer-left  {
+    left: 12px;
+  }
+
+  .footer-right {
+    right: 12px;
+  }
+
 }
 
 
@@ -634,6 +855,16 @@ media query 640
 ****************************************/
 
 @media screen and (max-width: 640px) {
+
+
+  .drop-nav-hidden  {
+    display: block;
+  }
+
+  .slider-nav-con {
+    margin: auto;
+    float: none
+  }
 
   .header-left-cont  {
     width: 83px;
@@ -736,6 +967,7 @@ media query 640
   }
 
 
+
   .additional-info-con  {
     display: block;
     margin: auto;
@@ -747,7 +979,7 @@ media query 640
   .realtor-info-append-con  {
     display: block;
     margin: auto;
-    width: 300px;
+    width: 280px;
   }
 
   .realtor-info-con {
@@ -762,6 +994,49 @@ media query 640
   .additional-info  {
     font-size: 14px;
   }
+
+
+
+  footer  {
+    height: 260px;
+  }
+
+  .footer-con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+    margin-top: -40px;
+  }
+
+  .footer-left  {
+    position: static;
+  }
+
+  .footer-right  {
+    position: static;
+    width: 255px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .copyright  {
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  .footer-contact-icon {
+    margin-left: 46px;
+  }
+
+  .footer-icons-con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
 
 
 }
