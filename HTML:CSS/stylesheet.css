@@ -23,6 +23,10 @@ select:focus {
   outline: none;
 }
 
+input:focus {
+  outline: none;
+}
+
 /**********************************************
           Body
 ***********************************************/
@@ -31,15 +35,20 @@ body  {
   height: 100%;
   width: 100%;
   font-family: 'Roboto', sans-serif;
-  margin: auto;
   background: #FFF;
+  margin: auto;
 }
 
+
 /**********************************************
-          Slider Navigation on menu click
+          Hide mobile navigation
 ***********************************************/
 
 .outer-slider-nav-con {
+  display: none;
+}
+
+.realtor-info-nav-mobile  {
   display: none;
 }
 
@@ -51,16 +60,16 @@ body  {
 header  {
   width: 100%;
   height: 137px;
+  background: #FFFFFF;
   position: fixed;
   z-index: 3;
 }
 
-
 .upper-header {
   max-width: 1350px;
+  background: #FFFFFF;
   margin: auto;
   position: relative;
-  background: #FFFFFF;
 }
 
 .header-left-cont  {
@@ -122,10 +131,10 @@ header  {
 
 .header-upper-nav-con:hover {
   cursor: pointer;
+  color: #FFFFFF;
   background: #aaaaaa;
   border-radius: 10px;
   opacity: .4;
-  color: #FFFFFF;
 }
 
 .header-upper-nav-con:hover .upper-nav-image {
@@ -138,10 +147,10 @@ header  {
 
 /*   header lower nav  */
 .lower-nav-titles {
-  float: right;
   font-size: 14px;
-  line-height: 50px;
   margin: 0 20px 0 20px;
+  float: right;
+  line-height: 50px;
   transition: .5s;
 }
 
@@ -163,10 +172,9 @@ header  {
 
 .header-lower-con  {
   max-width: 1350px;
-  margin: auto;
   height: 50px;
   background: #aaaaaa;
-
+  margin: auto;
 }
 
 .search-input {
@@ -182,10 +190,10 @@ header  {
   width: 131px;
   height: 36px;
   font-size: 14px;
+  color: white;
   background: #2399a6;
   border: none;
   border-radius: 3px;
-  color: white;
   margin: 0 64px 0 18px;
   display: inline-block;
   transition: .5s;
@@ -193,8 +201,8 @@ header  {
 
 .search-button:hover  {
   cursor: pointer;
-  box-shadow: 1px 1px 15px #FFFFFF;
   background: #237377;
+  box-shadow: 1px 1px 15px #FFFFFF;
 }
 
 .nav-titles {
@@ -220,6 +228,7 @@ header  {
   height: 137px;
 }
 
+/* realtor contact section */
 .outer-realtor-contact-con  {
   width: 100%;
   background: #eeeeee;
@@ -228,23 +237,15 @@ header  {
 .realtor-contact-con  {
   max-width: 1350px;
   height: 360px;
-  margin: auto;
   background: #eeeeee;
+  margin: auto;
   display: flex;
-  /*align-items: center;
-  justify-content: center;*/
 }
 
-/* profile picture container */
 .profile-picture-con  {
   width: 237px;
   height: 360px;
   margin-left: 112px;
-  /*background-image: url('./Assets/Realtor Image/saramortensun.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: inline-flex;*/
   position: relative;
   overflow: hidden;
 }
@@ -254,7 +255,6 @@ header  {
   width: 265px;
 }
 
-/*  name and contect me container */
 .name-con {
   width: 225px;
   height: 360px;
@@ -263,26 +263,26 @@ header  {
 
 .realtor-name {
   font-size: 30px;
-   font-weight: 100;
-   margin: 91px 0 0 0px;
-   letter-spacing: 2;
+  font-weight: 100;
+  letter-spacing: 2;
+  margin: 91px 0 0 0px;
 }
 
 .registered-realtor {
   font-size: 12px;
-  margin: 6px 0 0 0;
   color: #aaaaaa;
   font-weight: 100;
+  margin: 6px 0 0 0;
 }
 
 .contact-button {
   width: 225px;
   height: 36px;
   font-size: 14px;
+  color: white;
   background: #2399a6;
   border: none;
   border-radius: 3px;
-  color: white;
   margin: 24px 0 0 0;
   transition: .5s;
 }
@@ -313,7 +313,6 @@ header  {
   transform: scale(1.2);
 }
 
-/* contact info container*/
 .contact-info-con {
   width: 225px;
   height: 360px;
@@ -360,20 +359,15 @@ header  {
 }
 
 /* realtor info section */
-
 .realtor-info-con {
-  /*max-width: 1100px;*/
   width: 100%;
-  /*display: flex;
-  align-items: center;
-  justify-content: center;*/
 }
 
+/* realtor info navigation */
 .realtor-info-nav-con {
   max-width: 1350px;
   width: 100%;
   height: 85px;
-  /*background: red;*/
   display: flex;
   margin: auto;
 }
@@ -416,17 +410,10 @@ header  {
   transform: scale(1.1);
 }
 
-.realtor-info-nav-mobile  {
-  display: none;
-}
-
-
-
+/* realtor info append area */
 .lower-realtor-info-con {
   max-width: 1350px;
   width: 100%;
-  /*height: 500px;*/
-  /*background: red;*/
   display: flex;
   margin: auto;
   margin-top: 50px;
@@ -434,36 +421,33 @@ header  {
 
 .realtor-info-append-con {
   width: 55%;
-  /*height: 500px;*/
   display: inline-block;
-  /*background: green;*/
   margin-left: 112px;
 }
 
 .additional-info-con  {
   width: 30%;
   display: inline-block;
-  /*background: orange;*/
   margin-right: 112px;
   padding-left:  110px;
 }
 
 .realtor-info-con {
-  color: #666666;
   font-size: 15px;
+  color: #666666;
   line-height: 1.7;
 }
 
 .additional-info-title  {
-  color: black;
   font-size: 16px;
+  color: black;
   font-weight: 500;
   margin: 0 0 6px 0;
 }
 
 .additional-info  {
-  color: #666666;
   font-size: 12px;
+  color: #666666;
   font-weight: 400;
   margin: 0 0 30px 0;
 }
@@ -475,44 +459,40 @@ footer
 
 footer  {
   width: 100%;
-  background: #2399a6;
   height: 130px;
+  background: #2399a6;
   margin-top: 50px;
 }
 
 .footer-con {
   max-width: 1350px;
   width: 100%;
-  /*display: flex;*/
   margin: auto;
-  /*margin-top: 50px;*/
   position: relative;
-  /*padding-top: 20px;*/
 }
 
 .footer-left  {
+  width: 226px;
   position: absolute;
   top: 20px;
   left: 112px;
-  width: 226px;
-  /*background: green;*/
 }
 
 .footer-contact-icon  {
+  height: 12px;
   fill: #FFFFFF;
   display: inline-block;
-  height: 12px;
 }
 
 .footer-phone-num {
-  display: inline-block;
-  color: #FFFFFF;
   font-size: 14px;
+  color: #FFFFFF;
+  display: inline-block;
 }
 
 .footer-address {
-  color: #FFFFFF;
   font-size: 14px;
+  color: #FFFFFF;
   margin-top: 8px;
 }
 
@@ -529,8 +509,8 @@ footer  {
 }
 
 .footer-social-icon {
-  fill: #FFFFFF;
   height: 17px;
+  fill: #FFFFFF;
   transition: .5s;
 }
 
@@ -541,11 +521,10 @@ footer  {
 }
 
 .footer-right  {
+  width: 275px;
   position: absolute;
   top: 20px;
   right: 112px;
-  width: 275px;
-  /*background: blue;*/
 }
 
 .footer-nav-con {
@@ -556,8 +535,8 @@ footer  {
 }
 
 .footer-nav {
-  color: #FFFFFF;
   font-size: 14px;
+  color: #FFFFFF;
   text-decoration: underline;
 }
 
@@ -567,8 +546,8 @@ footer  {
 }
 
 .copyright  {
-  color: #FFFFFF;
   font-size: 10px;
+  color: #FFFFFF;
   margin-left: 100px;
   margin-top: 12px;
 }
@@ -581,7 +560,6 @@ footer  {
   fill: #FFFFFF;
   height: 28px;
 }
-
 
 
 /***************************************
@@ -642,8 +620,6 @@ media query 1000
     width: 185px;
   }
 
-
-
   .about-me-nav {
     margin-left: 66px;
   }
@@ -652,8 +628,6 @@ media query 1000
     margin-right: 66px;
   }
 
-
-
   .additional-info-con  {
     margin-right: 66px;
   }
@@ -661,8 +635,6 @@ media query 1000
   .realtor-info-append-con  {
     margin-left: 66px;
   }
-
-
 
   .footer-left  {
     left: 66px;
@@ -690,26 +662,22 @@ media query 805
   }
 
   .outer-slider-nav-con {
-    display: block;
     width: 100%;
+    display: block;
     position: absolute;
     top: -500px;
-    z-index: 2;
     transition: 1s;
+    z-index: 2;
   }
 
   .slider-nav-con {
     width: 300px;
-    /*height: 400px;*/
-    /*margin: auto;*/
-    float: right;
     background: white;
+    float: right;
+    padding: 10px;
     border: 2px solid #2399a6;
     border-radius: 5px;
     display: flex;
-    padding: 10px;
-    /* align-items: center; */
-    /* justify-content: center; */
     flex-direction: column;
   }
 
@@ -740,8 +708,6 @@ media query 805
     display: none;
   }
 
-
-
   header  {
     height: 100px;
   }
@@ -749,7 +715,6 @@ media query 805
   .header-spacer  {
     height: 100px;
   }
-
 
   .header-lower-nav {
     display: none;
@@ -788,7 +753,6 @@ media query 805
     margin: 0 5px 0 10px;
   }
 
-
   .realtor-name {
     margin-top: 10px;
   }
@@ -818,8 +782,6 @@ media query 805
     margin-left: -11px;
   }
 
-
-
   .realtor-info-nav-con {
     height: 55px;
   }
@@ -840,20 +802,16 @@ media query 805
     font-size: 18px;
   }
 
-
-
   .additional-info-con  {
+    width: 23%;
     margin-right: 12px;
     padding-left: 20px;
-    width: 23%;
   }
 
   .realtor-info-append-con  {
-    margin-left: 12px;
     width: 77%;
+    margin-left: 12px;
   }
-
-
 
   .footer-left  {
     left: 12px;
@@ -871,7 +829,6 @@ media query 640
 ****************************************/
 
 @media screen and (max-width: 640px) {
-
 
   .drop-nav-hidden  {
     display: block;
@@ -926,9 +883,9 @@ media query 640
   }
 
   .profile-picture-con  {
-    margin: 0px;
     width: 203px;
     height: 476px;
+    margin: 0px;
     margin-right: 67px;
   }
 
@@ -951,8 +908,6 @@ media query 640
     margin-top: 11px;
   }
 
-
-
   .realtor-info-nav-con {
     display: none;
   }
@@ -969,37 +924,35 @@ media query 640
 
   select {
     width: 280px;
-    margin-top: 25px;
     height: 32px;
+    font-size: 15px;
+    color: #2399a6;
+    font-weight: 500;
+    margin-top: 25px;
+    padding-right: 20px;
+    padding-left: 10px;
+    outline: 1px solid black;
+    border-radius: 0px;
     box-shadow: none;
+    background: #FFFFFF url('./Assets/SVGs/angle-down.svg') 95% no-repeat;
     background: transparent;
     background-image: none;
     -webkit-appearance: none;
-    border: 1px solid black;
-    border-radius: 0px;
     -moz-appearance: window;
-    background: #FFFFFF url('./Assets/SVGs/angle-down.svg') 95% no-repeat;
-    padding-right: 20px;
-    padding-left: 10px;
-    color: #2399a6;
-    font-size: 15px;
-    font-weight: 500;
   }
 
-
-
   .additional-info-con  {
+    width: 300px;
     display: block;
     margin: auto;
-    width: 300px;
     margin-top: 30px;
     padding-left: 0px;
   }
 
   .realtor-info-append-con  {
+    width: 280px;
     display: block;
     margin: auto;
-    width: 280px;
   }
 
   .realtor-info-con {
@@ -1007,27 +960,25 @@ media query 640
   }
 
   .lower-realtor-info-con {
-    flex-direction: column;
     margin-top: 20px;
+    flex-direction: column;
   }
 
   .additional-info  {
     font-size: 14px;
   }
 
-
-
   footer  {
     height: 260px;
   }
 
   .footer-con {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
     padding-top: 20px;
     margin-top: -40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
 
   .footer-left  {
@@ -1035,8 +986,8 @@ media query 640
   }
 
   .footer-right  {
-    position: static;
     width: 255px;
+    position: static;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -1052,11 +1003,9 @@ media query 640
   }
 
   .footer-icons-con {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
   }
-
-
 
 }
