@@ -214,8 +214,6 @@ header  {
           Main
 ***********************************************/
 
-
-
 .header-spacer  {
   height: 137px;
 }
@@ -236,15 +234,22 @@ header  {
 }
 
 /* profile picture container */
-.profile-picture  {
+.profile-picture-con  {
   width: 237px;
   height: 360px;
   margin-left: 112px;
-  background-image: url('./Assets/Realtor Image/saramortensun.jpg');
+  /*background-image: url('./Assets/Realtor Image/saramortensun.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  display: inline-flex;
+  display: inline-flex;*/
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-picture  {
+  position: absolute;
+  width: 265px;
 }
 
 /*  name and contect me container */
@@ -612,10 +617,14 @@ media query 1000
     margin-left: 45px;
   }
 
-  .profile-picture  {
+  .profile-picture-con  {
     width: 203px;
     height: 270px;
     margin-left: 66px;
+  }
+
+  .profile-picture  {
+    width: 205px;
   }
 
   .realtor-name {
@@ -785,10 +794,14 @@ media query 805
     height: 186px;
   }
 
-  .profile-picture {
+  .profile-picture-con {
     width: 138px;
     height: 186px;
     margin-left: 12px;
+  }
+
+  .profile-picture  {
+    width: 138px;
   }
 
   .name-con {
@@ -909,11 +922,15 @@ media query 640
     flex-direction: column;
   }
 
-  .profile-picture  {
+  .profile-picture-con  {
     margin: 0px;
     width: 203px;
     height: 476px;
     margin-right: 67px;
+  }
+
+  .profile-picture  {
+    width: 205px;
   }
 
   .name-con {
