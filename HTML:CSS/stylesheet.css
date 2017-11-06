@@ -787,6 +787,15 @@ media query 805
     margin-left: -11px;
   }
 
+  .contact-con  {
+    margin-bottom: 12px;
+  }
+
+  .contact-icon {
+    height: 16px;
+    margin: 0 10px 0 0;
+  }
+
   .realtor-info-nav-con {
     height: 55px;
   }
@@ -947,7 +956,7 @@ media query 640
   }
 
   .additional-info-con  {
-    width: 300px;
+    width: 280px;
     display: block;
     margin: auto;
     margin-top: 30px;
@@ -988,6 +997,20 @@ media query 640
 
   .footer-left  {
     position: static;
+    width: 255px;
+  }
+
+  .footer-social-con  {
+    width: 100%;
+    padding: 0 0 0 0;
+  }
+
+  .footer-address {
+    text-align: center;
+  }
+
+  .footer-contact-icon  {
+    margin-left: 60px;
   }
 
   .footer-right  {
