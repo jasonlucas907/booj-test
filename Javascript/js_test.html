@@ -199,6 +199,33 @@
 
 				$('#clickEventLink').on('click', changeLinkClass)
 
+
+				// get ajax obj
+				const getObject = () => {
+					console.log('getObjectFire');
+				$.get('./ajax_return.html', function( data ) {
+					console.log('getObject data', data);
+				  appendAjax(data);
+					});
+				}
+
+				const appendAjax = (obj) => {
+					console.log('appendAjax fire', obj);
+  				return obj.map(item => {
+			    return $('#jsonResponse').append
+				    (`
+							<ul>
+								<li>${item}</li>
+							</ul>
+				    `);
+				  });
+				}
+
+				$(document).ready(() => {
+					console.log('ready listener fire');
+  				getObject()
+				})
+
 			});
 
 		</script>
